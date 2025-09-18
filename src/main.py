@@ -51,7 +51,6 @@ def generate_page_recursive(base_path):
                 file_dest_path = os.path.join(dest_path,html_path).replace(".md",".html")
                 generate_page(from_path,template_path,file_dest_path,base_path)
 
-
 def main():
     if os.path.exists(os.path.join(base_file_path,"docs")):
         shutil.rmtree("docs")
@@ -65,8 +64,6 @@ def main():
 
     publish_site(file_path,dest_path)
     generate_page_recursive(basepath)
-    
-    
 
 if __name__ == "__main__":
     main()
